@@ -7,16 +7,13 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="0dp"
-        android:layout_weight="4"
+        android:layout_weight="1"
         android:scaleType="centerCrop"
         android:src="@drawable/darksouls3" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="0dp"
-        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
         android:background="#129766"
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
@@ -26,8 +23,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.4"
+        android:layout_height="wrap_content"
         android:background="#129766"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
