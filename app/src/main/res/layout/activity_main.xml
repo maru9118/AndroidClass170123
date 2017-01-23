@@ -5,25 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:weightSum="1"
     tools:context="com.example.user.aclass.MainActivity">
 
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="#129766"
         android:text="안녕하세요"
         android:textSize="45sp" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="311dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:scaleType="centerCrop"
-        android:layout_weight="0.68"
         android:src="@drawable/dis" />
 
 </LinearLayout>
