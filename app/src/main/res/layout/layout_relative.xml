@@ -4,11 +4,21 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/hello_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:background="#38cd0f"
         android:text="Hello"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hello_text"
+        android:layout_toStartOf="@id/hello_text"
+        android:background="#a73939"
+        android:text="왼쪽"
         android:textSize="32sp" />
 
     <TextView
