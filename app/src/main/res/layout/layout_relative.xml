@@ -7,6 +7,7 @@
         android:id="@+id/hello_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:background="#38cd0f"
         android:text="Hello"
@@ -15,25 +16,65 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hello_text"
-        android:layout_toStartOf="@id/hello_text"
-        android:background="#a73939"
-        android:text="왼쪽"
+        android:layout_above="@id/hello_text"
+        android:layout_alignParentEnd="true"
+        android:text="위쪽"
         android:textSize="32sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/hello_text"
+        android:text="왼쪽"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/android_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="#a2ab30"
-        android:text="수원스마트앱개발학원"
+        android:text="Android"
         android:textSize="32sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/android_text"
+        android:text="위쪽"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/android_text"
+        android:text="오른쪽"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/smart_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:background="#56636e"
-        android:text="김종호 원생"
+        android:text="수원스마트"
+        android:textSize="32sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/smart_text"
+        android:text="왼쪽"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/smart_text"
+        android:text="오른쪽"
         android:textSize="32sp" />
 
 </RelativeLayout>
