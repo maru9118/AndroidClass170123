@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="5dp"
+                android:text="Team A" />
+
+            <TextView
+                android:id="@+id/A_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="63dp"
+                android:layout_marginTop="10dp"
+                android:text="0"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/A_3point"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="39dp"
+                android:text="+3points"
+                android:textSize="10sp"
+                />
+
+            <Button
+                android:id="@+id/A_2point"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="7dp"
+                android:text="+2points"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/A_1point"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="7dp"
+                android:text="Free Throw"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="7dp"
+            android:background="#24626161">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="5dp"
+                android:text="Team B" />
+
+            <TextView
+                android:id="@+id/B_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="10dp"
+                android:text="0"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/B_3point"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="41dp"
+                android:text="+3points"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/B_2point"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="7dp"
+                android:text="+2points"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/B_1point"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="7dp"
+                android:text="Free Throw"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="140dp"
+            android:text="reset"
+            android:textSize="10sp"
+            />
+</LinearLayout>
