@@ -16,11 +16,14 @@ public class Count_CounterActivity extends AppCompatActivity {
     private Button mB2point;
     private Button mB1point;
 
-    private TextView mAsocore;
-    private TextView mBsocore;
+    private Button mResult;
 
-    private int scoreA;
-    private int scoreB;
+    private TextView mAsocoreView;
+    private TextView mBsocoreView;
+
+    private int scoreA = 0;
+    private int scoreB = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +33,84 @@ public class Count_CounterActivity extends AppCompatActivity {
         mA3point = (Button) findViewById(R.id.A_3point);
         mA2point = (Button) findViewById(R.id.A_2point);
         mA1point = (Button) findViewById(R.id.A_1point);
-        mAsocore = (TextView)  findViewById(R.id.A_score);
+        mAsocoreView = (TextView) findViewById(R.id.A_score);
 
         mB3point = (Button) findViewById(R.id.B_3point);
         mB2point = (Button) findViewById(R.id.B_2point);
         mB1point = (Button) findViewById(R.id.B_1point);
-        mBsocore = (TextView)  findViewById(R.id.B_score);
+        mBsocoreView = (TextView) findViewById(R.id.B_score);
+
+        mResult = (Button) findViewById(R.id.reset);
 
         mA3point.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                scoreA = scoreA + 3;
+                addScoreA();
             }
         });
+
+        mA2point.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreA = scoreA + 2;
+                addScoreA();
+            }
+        });
+
+        mA1point.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreA = scoreA + 1;
+                addScoreA();
+            }
+        });
+
+        mB3point.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreB = scoreB + 3;
+                addScoreB();
+            }
+        });
+
+        mB2point.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreB = scoreB + 2;
+                addScoreB();
+            }
+        });
+
+        mB1point.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreB = scoreB + 1;
+                addScoreB();
+            }
+        });
+
+        mResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Reset();
+            }
+        });
+
+    }
+
+    public void addScoreA() {
+        mAsocoreView.setText("" + scoreA);
+    }
+
+    public void addScoreB() {
+        mBsocoreView.setText("" + scoreB);
+    }
+
+    public void Reset() {
+        scoreA = 0;
+        scoreB = 0;
+        mAsocoreView.setText("" + 0);
+        mBsocoreView.setText("" + 0);
     }
 }
