@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="7dp"
-            android:text="2"
+            android:text="0"
             android:textSize="20sp" />
 
         <Button
@@ -62,7 +62,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/order"
+        android:id="@+id/order_button"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
