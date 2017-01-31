@@ -10,8 +10,9 @@ import android.widget.Toast;
 
 public class Management extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView mId;
-    private TextView mPassword;
+    public static final int REQUEST_CODE = 1000;
+    private EditText mId;
+    private EditText mPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,22 +31,19 @@ public class Management extends AppCompatActivity implements View.OnClickListene
         intent.putExtra("id", mId.getText().toString());
         intent.putExtra("password", mPassword.getText().toString());
 
-        startActivityForResult(intent, 1000);
+        startActivityForResult(intent, REQUEST_CODE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        if(requestCode == REQUEST_CODE
+                && resultCode == RESULT_OK
+                && data != null) {
+            String text = data.getStringExtra("result");
 
-        String guest = data.getStringExtra("guest");
-        Toast.makeText(this, guest, Toast.LENGTH_SHORT).show();
-
-        String sales = data.getStringExtra("sales");
-        Toast.makeText(this, sales, Toast.LENGTH_SHORT).show();
-
-        String product = data.getStringExtra("product");
-        Toast.makeText(this, product, Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        }
     }
 }
