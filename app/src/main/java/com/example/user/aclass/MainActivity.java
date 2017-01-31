@@ -1,76 +1,61 @@
 package com.example.user.aclass;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
     public static final int QUANTITY_MIN = 0;
     public static final int QUANTITY_MAX = 10;
     public static final int COFFEE_PRICE = 3000;
+    public static final int CREAM_PRICE = 500;
 
-    private Button mMinusButton;
-    private Button mPlusButton;
     private TextView mQuantityTextView;
     private TextView mResultTextView;
-    private Button mOrderButton;
+    private CheckBox mCreamCheckBox;
+    private EditText mCommentEditText;
 
     // 수량
     private int mQuantity;
 
+    // 휘핑크림
+    private boolean mIsCream;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_exam_2);
 
+        // 초기화
         init();
 
+        // 레이아웃 표시
+        setContentView(R.layout.layout_exam_2);
+
         // 레이아웃에서 특정 id를 인스턴스 변수와 연결
-        mMinusButton = (Button) findViewById(R.id.minus_button);
-        mPlusButton = (Button) findViewById(R.id.plus_button);
-        mOrderButton = (Button) findViewById(R.id.order_button);
         mQuantityTextView = (TextView) findViewById(R.id.quntity_text);
         mResultTextView = (TextView) findViewById(R.id.result_text);
-
-        mMinusButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                mQuantity--;
-                if (mQuantity < QUANTITY_MIN) {
-                    mQuantity = QUANTITY_MIN;
-                }
-                displayResult();
-            }
-        });
+        mCreamCheckBox = (CheckBox) findViewById(R.id.cream_check);
+        mCommentEditText = (EditText) findViewById(R.id.comment_edit) ;
 
         // 무명클래스
-        mPlusButton.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.minus_button).setOnClickListener(this);
+        findViewById(R.id.plus_button).setOnClickListener(this);
+        findViewById(R.id.order_button).setOnClickListener(this);
 
+        mCreamCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                mQuantity++;
-                if (mQuantity > QUANTITY_MAX) {
-                    mQuantity = QUANTITY_MAX;
-                }
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mIsCream = isChecked;
                 displayResult();
-            }
-        });
-
-        mOrderButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String message = mResultTextView.getText().toString();
-                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -78,12 +63,56 @@ public class MainActivity extends AppCompatActivity {
     private void displayResult() {
         mQuantityTextView.setText("" + mQuantity);
 
-        String result = "가격 : " + (COFFEE_PRICE * mQuantity)
-                + "원\n감사합니다";
+        int total = COFFEE_PRICE * mQuantity;
+
+        if (mIsCream) {
+            total += CREAM_PRICE;
+        } else {
+            total -= CREAM_PRICE;
+        }
+
+        String result = String.format("가격 : %d원\n수량 : %d개\n휘핑크림 : %s\n감사합니다",
+                total,
+                mQuantity,
+                mIsCream);
         mResultTextView.setText(result);
     }
 
     private void init() {
         mQuantity = 0;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.minus_button:
+                mQuantity--;
+                if (mQuantity < QUANTITY_MIN) {
+                    mQuantity = QUANTITY_MIN;
+                }
+                displayResult();
+                break;
+            case R.id.plus_button:
+                mQuantity++;
+                if (mQuantity > QUANTITY_MAX) {
+                    mQuantity = QUANTITY_MAX;
+                }
+                displayResult();
+                break;
+            case R.id.order_button:
+                String message = mResultTextView.getText().toString();
+//                Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+
+
+                // OrderCheckActiviity 화면을 시작
+                Intent intent = new Intent(this, OrderCheckActivity.class);
+
+                // 데이터 담기
+                intent.putExtra("result",message);
+                intent.putExtra("commant",mCommentEditText.getText().toString());
+                startActivity(intent);
+                break;
+        }
+
     }
 }

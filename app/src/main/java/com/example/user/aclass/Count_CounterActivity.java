@@ -61,7 +61,7 @@ public class Count_CounterActivity extends AppCompatActivity {
         mA1point.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreA = scoreA + 1;
+                scoreA++;
                 addScoreA();
             }
         });
@@ -85,7 +85,7 @@ public class Count_CounterActivity extends AppCompatActivity {
         mB1point.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreB = scoreB + 1;
+                scoreB++;
                 addScoreB();
             }
         });
