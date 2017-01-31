@@ -42,9 +42,9 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_CODE_EXAMPLE && resultCode == RESULT_OK && data != null) {
-            Log.d(TAG, "onActivityResult: " + requestCode);
-            Log.d(TAG, "onActivityResult: " + resultCode);
-            Log.d(TAG, "onActivityResult: " + data);
+//            Log.d(TAG, "onActivityResult: " + requestCode);
+//            Log.d(TAG, "onActivityResult: " + resultCode);
+//            Log.d(TAG, "onActivityResult: " + data);
             String result = data.getStringExtra("result");
             int value = data.getIntExtra("int", -1);
             Toast.makeText(this, result + ", int: " + value, Toast.LENGTH_SHORT).show();
