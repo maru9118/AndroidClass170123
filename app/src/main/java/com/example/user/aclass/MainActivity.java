@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String message = mResultTextView.getText().toString();
 //                Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 
-
                 // OrderCheckActiviity 화면을 시작
                 Intent intent = new Intent(this, OrderCheckActivity.class);
 
@@ -116,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
         }
-
     }
 
 
