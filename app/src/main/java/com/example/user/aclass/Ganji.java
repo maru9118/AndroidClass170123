@@ -1,9 +1,11 @@
 package com.example.user.aclass;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -44,6 +46,9 @@ public class Ganji extends AppCompatActivity implements View.OnClickListener {
         if (mBirth.getText().toString().isEmpty()) {
             Toast.makeText(this, "여러분 어플을 괴롭히지 마세요...", Toast.LENGTH_SHORT).show();
         } else {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(mBirth.getWindowToken(), 0);
+
             Intent intent = new Intent(this, ganji2.class);
             int a = Integer.parseInt(mBirth.getText().toString());
             intent.putExtra("띠", mChangeList.get(a % 12));

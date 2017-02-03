@@ -35,7 +35,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="당신의 태어난 년도를 입력해주세요."
-            android:textColorHint="#000"/>
+            android:textColorHint="#000"
+            android:maxLength="4"
+            android:inputType="number"
+            />
 
     </LinearLayout>
 
