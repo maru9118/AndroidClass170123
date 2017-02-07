@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.user.aclass">
+    package="com.first.user.aclass">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,46 +10,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Count_CounterActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Count_CounterActivity" />
         <activity android:name=".OrderCheckActivity" />
-        <activity android:name=".StartActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".StartActivity" />
         <activity android:name=".TargetActivity" />
-        <activity android:name=".Management">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Management" />
         <activity android:name=".Mangement2Activity" />
-        <activity android:name=".SignUpExam">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".SignUpExam" />
         <activity android:name=".SignUpExam2" />
-        <activity android:name=".Ganji_">
+        <activity android:name=".Ganji">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,14 +27,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".ganji2" />
-        <activity android:name=".WebBrowser">
+        <activity android:name=".WebBrowser" />
+        <activity android:name=".ListView" />
+        <activity
+            android:name=".MemoExam"
+            android:label="@string/title_activity_memo_exam"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListView"></activity>
+        <activity android:name=".TagetMemo"></activity>
     </application>
 
 </manifest>
