@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
-public class Ganji extends AppCompatActivity implements View.OnClickListener {
+public class Ganji_ extends AppCompatActivity implements View.OnClickListener {
 
     public static final int REQUEST_CODE = 1000;
     private EditText mBirth;
