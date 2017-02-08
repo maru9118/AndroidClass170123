@@ -11,7 +11,6 @@
     tools:context="com.first.user.aclass.ListView">
 
     <ListView
-        android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

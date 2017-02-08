@@ -27,7 +27,7 @@ public class ListView extends AppCompatActivity {
         setContentView(R.layout.activity_list_view);
 
         // 뷰
-        mListView = (android.widget.ListView) findViewById(R.id.list_view);
+//        mListView = (android.widget.ListView) findViewById(R.id.list_view);
 
         // 데이터
         mDataList = new ArrayList<>();
