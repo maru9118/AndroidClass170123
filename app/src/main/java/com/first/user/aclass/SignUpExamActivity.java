@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class SignUpExam extends AppCompatActivity implements View.OnClickListener {
+public class SignUpExamActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final int REQUEST_CODE = 1000;
     private EditText mId;
@@ -45,7 +45,7 @@ public class SignUpExam extends AppCompatActivity implements View.OnClickListene
                         ) {
                     Toast.makeText(this, "비밀번호가 다릅니다", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(this, SignUpExam2.class);
+                    Intent intent = new Intent(this, SignUpExam2Activity.class);
                     intent.putExtra("id", mId.getText().toString());
                     intent.putExtra("password", mPassword.getText().toString());
                     intent.putExtra("email", mEmail.getText().toString());
@@ -65,7 +65,7 @@ public class SignUpExam extends AppCompatActivity implements View.OnClickListene
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-        Intent intent = new Intent(this, SignUpExam2.class);
+        Intent intent = new Intent(this, SignUpExam2Activity.class);
 
         // Check which radio button was clicked
         switch (view.getId()) {

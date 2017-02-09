@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Management extends AppCompatActivity implements View.OnClickListener {
+public class ManagementActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final int REQUEST_CODE = 1000;
     private EditText mId;

@@ -2,4 +2,6 @@
     <string name="app_name">당신의 12간지는?</string>
     <string name="title_activity_implicit">ImplicitActivity</string>
     <string name="title_activity_memo_exam">MemoExam</string>
+    <string name="title_activity_color_list">ColorListActivity</string>
+    <string name="title_activity_num_ber">NumBerActivity</string>
 </resources>

@@ -15,22 +15,21 @@
         <activity android:name=".OrderCheckActivity" />
         <activity android:name=".StartActivity" />
         <activity android:name=".TargetActivity" />
-        <activity android:name=".Management" />
+        <activity android:name=".ManagementActivity" />
         <activity android:name=".Mangement2Activity" />
-        <activity android:name=".SignUpExam" />
-        <activity android:name=".SignUpExam2" />
-        <activity android:name=".Ganji">
+        <activity android:name=".SignUpExamActivity" />
+        <activity android:name=".SignUpExam2Activity" />
+        <activity android:name=".GanjiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ganji2" />
-        <activity android:name=".WebBrowser" />
-        <activity android:name=".ListView" />
+        <activity android:name=".ganji2Activity" />
+        <activity android:name=".WebBrowserActivity" />
         <activity
-            android:name=".MemoExam"
+            android:name=".MemoExamActivity"
             android:label="@string/title_activity_memo_exam"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -39,7 +38,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TagetMemo"></activity>
+        <activity android:name=".TagetMemoActivity" />
+        <activity android:name=".ColorListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NumBerActivity"
+            android:label="@string/title_activity_num_ber"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -7,9 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class MemoExam extends AppCompatActivity {
+public class MemoExamActivity extends AppCompatActivity {
 
-    private ListView mListview;
 
     public static final int REQUEST_CODE = 1000;
 
@@ -24,7 +23,7 @@ public class MemoExam extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MemoExam.this , TagetMemo.class);
+                Intent intent = new Intent(MemoExamActivity.this , TagetMemoActivity.class);
                 startActivityForResult(intent , REQUEST_CODE);
             }
         });

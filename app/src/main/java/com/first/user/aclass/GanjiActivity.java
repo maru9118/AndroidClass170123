@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
-public class Ganji extends AppCompatActivity implements View.OnClickListener {
+public class GanjiActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final int REQUEST_CODE = 1000;
     private EditText mBirth;
@@ -49,7 +49,7 @@ public class Ganji extends AppCompatActivity implements View.OnClickListener {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(mBirth.getWindowToken(), 0);
 
-            Intent intent = new Intent(this, ganji2.class);
+            Intent intent = new Intent(this, ganji2Activity.class);
             int a = Integer.parseInt(mBirth.getText().toString());
             intent.putExtra("띠", mChangeList.get(a % 12));
 

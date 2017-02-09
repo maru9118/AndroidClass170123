@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ganji2 extends AppCompatActivity implements View.OnClickListener {
+public class ganji2Activity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView mResult;
 

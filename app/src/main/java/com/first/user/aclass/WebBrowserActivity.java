@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class WebBrowser extends AppCompatActivity {
+public class WebBrowserActivity extends AppCompatActivity {
 
     private EditText mUrlEditText;
     private WebView mWebView;
@@ -45,7 +45,7 @@ public class WebBrowser extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
 
-                Toast.makeText(WebBrowser.this, "로딩 완료", Toast.LENGTH_SHORT).show();
+                Toast.makeText(WebBrowserActivity.this, "로딩 완료", Toast.LENGTH_SHORT).show();
             }
         });
 
