@@ -10,26 +10,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Count_CounterActivity" />
-        <activity android:name=".OrderCheckActivity" />
-        <activity android:name=".StartActivity" />
-        <activity android:name=".TargetActivity" />
-        <activity android:name=".ManagementActivity" />
-        <activity android:name=".Mangement2Activity" />
-        <activity android:name=".SignUpExamActivity" />
-        <activity android:name=".SignUpExam2Activity" />
-        <activity android:name=".GanjiActivity">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.Count_CounterActivity" />
+        <activity android:name=".Activity.OrderCheckActivity" />
+        <activity android:name=".Activity.StartActivity" />
+        <activity android:name=".Activity.TargetActivity" />
+        <activity android:name=".Activity.ManagementActivity" />
+        <activity android:name=".Activity.Mangement2Activity" />
+        <activity android:name=".Activity.SignUpExamActivity" />
+        <activity android:name=".Activity.SignUpExam2Activity" />
+        <activity android:name=".Activity.GanjiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ganji2Activity" />
-        <activity android:name=".WebBrowserActivity" />
+        <activity android:name=".Activity.ganji2Activity" />
+        <activity android:name=".Activity.WebBrowserActivity" />
         <activity
-            android:name=".MemoExamActivity"
+            android:name=".Activity.MemoExamActivity"
             android:label="@string/title_activity_memo_exam"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -38,8 +38,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TagetMemoActivity" />
-        <activity android:name=".ColorListActivity">
+        <activity android:name=".Activity.TagetMemoActivity" />
+        <activity android:name=".Activity.ColorListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,9 +47,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NumBerActivity"
+            android:name=".Activity.NumBerActivity"
             android:label="@string/title_activity_num_ber"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.ColorFragmentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

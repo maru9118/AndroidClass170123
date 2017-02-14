@@ -1,4 +1,4 @@
-package com.first.user.aclass;
+package com.first.user.aclass.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.first.user.aclass.Adapter.NumberAdapter;
 import com.first.user.aclass.Model.ClassNumber;
+import com.first.user.aclass.R;
 
 import java.util.ArrayList;
 

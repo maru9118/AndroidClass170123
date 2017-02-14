@@ -1,4 +1,4 @@
-package com.first.user.aclass;
+package com.first.user.aclass.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.first.user.aclass.R;
 
 public class SignUpExam2Activity extends AppCompatActivity implements View.OnClickListener {
 

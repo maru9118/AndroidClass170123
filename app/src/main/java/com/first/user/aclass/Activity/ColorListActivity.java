@@ -1,4 +1,4 @@
-package com.first.user.aclass;
+package com.first.user.aclass.Activity;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.widget.ListView;
 
 import com.first.user.aclass.Adapter.Color_Adapter;
 import com.first.user.aclass.Model.ColorData;
+import com.first.user.aclass.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.first.user.aclass;
+package com.first.user.aclass.Activity;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.first.user.aclass.R;
 
 public class WebBrowserActivity extends AppCompatActivity {
 

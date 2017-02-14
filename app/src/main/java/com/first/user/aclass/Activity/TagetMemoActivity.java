@@ -1,9 +1,11 @@
-package com.first.user.aclass;
+package com.first.user.aclass.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+
+import com.first.user.aclass.R;
 
 public class TagetMemoActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.first.user.aclass;
+package com.first.user.aclass.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.first.user.aclass.R;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
 
